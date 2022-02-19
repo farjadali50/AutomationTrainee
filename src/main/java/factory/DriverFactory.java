@@ -10,48 +10,38 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.HashMap;
 
 public class DriverFactory {
-    private WebDriver driver;
-    public String downloadFilepath = "C:\\Users\\Zeeshan Ahmad\\Desktop\\Report";
-    public String Test = "test Code test";
+    public WebDriver driver;
 
+    public WebDriver getDriver() {
+        return driver;
+    }
 
-    public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
-
-    public WebDriver setDriver(String browserName){
-
-        switch (browserName.toLowerCase()) {
-            case "chrome" -> setChromeDriver();
-            case "firefox" -> setFirefoxDriver();
-            case "edge" -> setEdgeDriver();
-            default -> System.out.println("Please pass correct web browser..Thank YOU!");
+    public WebDriver setDriver(String browserName) {
+        switch (browserName.toLowerCase()){
+            case "chrome":
+                setChromeDriver();
+            case "firefox":
+                setFirefoxDriver();
+            case "edge":
+                setEdgeDriver();
+            default:
+                System.out.println("Invalid browser Name");
         }
-        getDriver().manage().deleteAllCookies();
-        getDriver().manage().window().maximize();
         return getDriver();
-
     }
 
     public void setChromeDriver(){
-        HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
-        chromePrefs.put("profile.default_content_settings.popups", 0);
-        chromePrefs.put("download.default_directory", downloadFilepath);
-        ChromeOptions options = new ChromeOptions();
-        options.setExperimentalOption("prefs", chromePrefs);
         WebDriverManager.chromedriver().setup();
-        tlDriver.set(new ChromeDriver(options));
+        driver = new ChromeDriver();
     }
 
     public void setFirefoxDriver(){
         WebDriverManager.firefoxdriver().setup();
-        tlDriver.set(new FirefoxDriver());
+        driver = new FirefoxDriver();
     }
 
     public void setEdgeDriver(){
         WebDriverManager.edgedriver().setup();
-        tlDriver.set(new EdgeDriver());
-    }
-
-    public static synchronized WebDriver getDriver(){
-        return tlDriver.get();
+        driver = new EdgeDriver();
     }
 }
