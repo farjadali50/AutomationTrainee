@@ -10,9 +10,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.HashMap;
 
 public class DriverFactory {
-    public WebDriver driver;
+    public static WebDriver driver;
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
         return driver;
     }
 
