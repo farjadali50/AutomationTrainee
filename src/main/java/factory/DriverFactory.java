@@ -20,10 +20,13 @@ public class DriverFactory {
         switch (browserName.toLowerCase()){
             case "chrome":
                 setChromeDriver();
+                break;
             case "firefox":
                 setFirefoxDriver();
+                break;
             case "edge":
                 setEdgeDriver();
+                break;
             default:
                 System.out.println("Invalid browser Name");
         }
