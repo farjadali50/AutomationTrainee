@@ -16,11 +16,11 @@ public class LoginPage {
     private By loginBtn = By.xpath(LoginPageElement.loginbtn);
 
     public void enterUsername(String username){
-        driver.findElement(usernameField).sendKeys("Admin");
+        driver.findElement(usernameField).sendKeys(username);
     }
 
     public void enterPassword(String password){
-        driver.findElement(passwordField).sendKeys("admin123");
+        driver.findElement(passwordField).sendKeys(password);
     }
 
     public void clickOnLoginButton(){
