@@ -10,9 +10,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.HashMap;
 
 public class DriverFactory {
-    public WebDriver driver;
+    public static WebDriver driver;
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
         return driver;
     }
 
@@ -20,10 +20,13 @@ public class DriverFactory {
         switch (browserName.toLowerCase()){
             case "chrome":
                 setChromeDriver();
+                break;
             case "firefox":
                 setFirefoxDriver();
+                break;
             case "edge":
                 setEdgeDriver();
+                break;
             default:
                 System.out.println("Invalid browser Name");
         }
