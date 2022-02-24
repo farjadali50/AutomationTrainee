@@ -1,8 +1,7 @@
 package webLocators;
 
 public class LoginPageElement {
-    public static final String usernameField = "//input[@name='txtUsername']";
-    public static final String passwordField = "//input[@name='txtPassword']";
-    public static final String loginButton = "//input[@value='LOGIN']";
-
+    public static final String username = "//input[@name='txtUsername']";
+    public static final String password = "//input[@name='txtPassword']";
+    public static final String loginbtn = "//input[@type='submit']";
 }
