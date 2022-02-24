@@ -7,19 +7,18 @@ import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 
 public class Hooks {
-    private DriverFactory driverFactory;
-    private WebDriver driver;
+    // private WebDriver driver;
 
     @Before(order = 0)
     public void launchBrowser(){
-        driverFactory = new DriverFactory();
-        driver = driverFactory.setDriver("chrome");
-        driver.get("https://opensource-demo.orangehrmlive.com/");
+        DriverFactory driverFactory = new DriverFactory();
+        driverFactory.setDriver("chrome");
+        DriverFactory.driver.get("https://opensource-demo.orangehrmlive.com/");
     }
 
     @After(order = 0)
     public void closeBrowser(){
-        driver.quit();
+        DriverFactory.driver.quit();
     }
 
 }

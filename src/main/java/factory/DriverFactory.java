@@ -16,18 +16,14 @@ public class DriverFactory {
         return driver;
     }
 
-    public WebDriver setDriver(String browserName) {
-        switch (browserName.toLowerCase()){
-            case "chrome":
-                setChromeDriver();
-            case "firefox":
-                setFirefoxDriver();
-            case "edge":
-                setEdgeDriver();
-            default:
-                System.out.println("Invalid browser Name");
+    public void setDriver(String browserName) {
+        switch (browserName.toLowerCase()) {
+            case "chrome" -> setChromeDriver();
+            case "firefox" -> setFirefoxDriver();
+            case "edge" -> setEdgeDriver();
+            default -> System.out.println("Invalid browser Name");
         }
-        return getDriver();
+
     }
 
     public void setChromeDriver(){
