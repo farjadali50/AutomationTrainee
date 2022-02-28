@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import webLocators.LoginPageElement;
@@ -23,9 +24,14 @@ public class LoginPage {
         driver.findElement(passwordField).sendKeys(password);
     }
 
-    public void clickOnLoginButton(){
+    public void clickOnLoginButton() throws InterruptedException {
         driver.findElement(loginBtn).click();
+        Thread.sleep(2000);
+    }
 
+    public void verifyUserLoginSuccessful() throws InterruptedException {
+        Thread.sleep(2000);
+        Assert.assertTrue(driver.getPageSource().contains("Dashboard"));
     }
 
 
