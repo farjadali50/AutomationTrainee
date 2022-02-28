@@ -23,8 +23,9 @@ public class LoginPage {
         driver.findElement(passwordField).sendKeys(password);
     }
 
-    public void clickOnLoginButton(){
+    public void clickOnLoginButton() throws InterruptedException {
         driver.findElement(loginBtn).click();
+        Thread.sleep(2000);
 
     }
 

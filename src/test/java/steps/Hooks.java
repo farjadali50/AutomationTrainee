@@ -15,6 +15,7 @@ public class Hooks {
         driverFactory = new DriverFactory();
         driver = driverFactory.setDriver("chrome");
         driver.get("https://opensource-demo.orangehrmlive.com/");
+        driver.manage().window().maximize();
     }
 
     @After()

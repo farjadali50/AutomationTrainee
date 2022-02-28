@@ -5,7 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import pages.LoginPage;
 
-public class Steps {
+public class LoginSteps {
     private final LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
 
     @Then("enter username {string}")
@@ -19,7 +19,8 @@ public class Steps {
     }
 
     @And("click on sign in button")
-    public void clickOnSignInButton() {
+    public void clickOnSignInButton() throws InterruptedException {
         loginPage.clickOnLoginButton();
     }
+
 }
