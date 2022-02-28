@@ -23,5 +23,9 @@ public class LoginSteps {
     public void clickOnSignInButton() {
      //   loginPage.pressLoginButton();
     }
+
+    @And("click signing button")
+    public void clickSigningButton() {
     }
+}
 
