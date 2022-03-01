@@ -15,7 +15,7 @@ public class AdminPage {
     private By AdminClick = By.xpath(AdminElement.Admin);
 
 
-    public void adminButtonClick(String admin) {
+    public void adminButtonClick() {
         driver.findElement(AdminClick).click();
 
     }

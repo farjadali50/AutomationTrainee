@@ -1,5 +1,6 @@
 Feature: Admin pages test cases
 
+  @test
   Scenario Outline : Click on Admin Button
     Then user enter username "<username>"
     Then user enter password "<password>"

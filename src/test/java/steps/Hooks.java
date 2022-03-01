@@ -11,7 +11,7 @@ public class Hooks {
         @Before(order = 0)
         public void launchBrowser(){
             DriverFactory driverFactory = new DriverFactory();
-            driverFactory.setDriver("chrome");
+            driverFactory.driver = driverFactory.setDriver("chrome");
             DriverFactory.driver.get("https://opensource-demo.orangehrmlive.com/");
         }
 
@@ -20,5 +20,5 @@ public class Hooks {
             DriverFactory.driver.quit();
         }
 
-    
+
 }
