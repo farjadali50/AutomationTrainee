@@ -1,7 +1,5 @@
 package RunnerJava;
 
-
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -12,7 +10,8 @@ import org.junit.runner.RunWith;
         glue = {"Steps", "Hooks"},
         plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "timeline:test-output-thread/", "rerun:target/failed_scenarios.txt"}
 )
-public class javaRunner {
+public class
+javaRunner {
     public javaRunner(){
 
     }
