@@ -1,10 +1,9 @@
-package steps;
+package Steps;
 
 import factory.DriverFactory;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.support.ui.Wait;
-import pages.LoginPage;
+import Pages.LoginPage;
 
 public class LoginSteps {
 

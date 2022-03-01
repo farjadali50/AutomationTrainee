@@ -1,9 +1,10 @@
-package pages;
+package Pages;
 
+import WebLocators.LoginPageElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import webLocators.LoginPageElement;
+
 
 public class LoginPage {
     public WebDriver driver;

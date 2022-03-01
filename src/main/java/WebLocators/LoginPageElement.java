@@ -1,4 +1,4 @@
-package webLocators;
+package WebLocators;
 
 public class LoginPageElement {
     public static final String username = "//input[@name='txtUsername']";
