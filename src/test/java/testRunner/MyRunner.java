@@ -7,15 +7,15 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src\\test\\resources\\features"},
-        glue = {"Steps","Hooks"},
+        features = {"src/test/resources/features"},
+        glue = {"steps","Hooks"},
         plugin = {
                 "pretty",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "timeline:test-output-thread/",
                 "rerun:target/failed_scenarios.txt"
-        },
-        tags = "@test"
+        }
+       // tags = "@test"
 )
 
 public class MyRunner {

@@ -1,4 +1,4 @@
-package Steps;
+package steps;
 
 import factory.DriverFactory;
 import io.cucumber.java.en.And;
