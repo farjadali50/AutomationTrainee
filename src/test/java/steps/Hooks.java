@@ -17,6 +17,7 @@ public class Hooks {
         driver = driverFactory.setDriver("chrome");
         driver.manage().window().maximize();
         driver.get("https://opensource-demo.orangehrmlive.com/");
+        driver.manage().window().maximize();
     }
     //@After()
     //public void logout() throws InterruptedException {
