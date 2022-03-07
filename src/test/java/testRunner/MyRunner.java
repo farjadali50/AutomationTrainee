@@ -14,7 +14,9 @@ import org.junit.runner.RunWith;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "timeline:test-output-thread/",
                 "rerun:target/failed_scenarios.txt"
-        }
+
+        },
+        tags = "@Leave"
 )
 
 public class MyRunner {

@@ -2,6 +2,7 @@ package steps;
 
 import factory.DriverFactory;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.support.ui.Wait;
 import pages.LoginPage;
@@ -13,6 +14,7 @@ public class LoginSteps {
 
     @Then("user enter username {string}")
     public void userEnterUsername(String username) {
+
         loginPage.enterUsername(username);
     }
 
@@ -34,5 +36,10 @@ public class LoginSteps {
     @Then("verify user is not successfully login")
     public void verifyUserIsNotSuccessfullyLogin() throws InterruptedException {
         loginPage.verifyUserLoginNotSuccessful();
+    }
+
+    @Given("user is on login page")
+    public void userIsOnLoginPage() throws InterruptedException {
+        loginPage.verifyUserIsOnLoginPage();
     }
 }

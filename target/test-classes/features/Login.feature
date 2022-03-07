@@ -1,5 +1,5 @@
 Feature: Login Page Test Case
-
+@Login
   Scenario Outline: Login with invalid credential
     Then user enter username "<username>"
     Then user enter password "<password>"

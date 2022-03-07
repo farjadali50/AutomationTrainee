@@ -14,10 +14,12 @@ public class Hooks {
         DriverFactory driverFactory = new DriverFactory();
         driverFactory.setDriver("chrome");
         DriverFactory.driver.get("https://opensource-demo.orangehrmlive.com/");
+        DriverFactory.driver.manage().window().maximize();
     }
 
     @After(order = 0)
-    public void closeBrowser(){
+    public void closeBrowser() throws InterruptedException {
+        Thread.sleep(4000);
         DriverFactory.driver.quit();
     }
 

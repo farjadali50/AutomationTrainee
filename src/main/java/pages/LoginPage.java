@@ -39,6 +39,11 @@ public class LoginPage {
         Assert.assertTrue(driver.getPageSource().contains("Invalid credentials"));
     }
 
+    public void verifyUserIsOnLoginPage() throws InterruptedException {
+        Thread.sleep(2000);
+        Assert.assertTrue(driver.getPageSource().contains("Login"));
+    }
+
 
 
 }
