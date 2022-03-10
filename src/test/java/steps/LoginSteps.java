@@ -24,4 +24,9 @@ public class LoginSteps {
     public void verifyUserIsSuccessfullyLogin() throws InterruptedException {
         loginPage.verifyUserLoginSuccessful();
     }
+
+    @Then("logout Application")
+    public void logoutApplication() throws InterruptedException {
+        loginPage.LogOut();
+    }
 }

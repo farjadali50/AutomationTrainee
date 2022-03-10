@@ -12,7 +12,6 @@ public class WebElements {
 
         Select JobTitle = new Select(driver.findElement(path));
         JobTitle.selectByVisibleText(value);
-
     }
 
 }

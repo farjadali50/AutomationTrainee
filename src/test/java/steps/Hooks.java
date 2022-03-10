@@ -19,16 +19,10 @@ public class Hooks {
         driver.get("https://opensource-demo.orangehrmlive.com/");
         driver.manage().window().maximize();
     }
-    //@After()
-    //public void logout() throws InterruptedException {
-        //driver.findElement(By.xpath("//a[@id='welcome']")).click();
-        //Thread.sleep(2000);
-        //driver.findElement(By.xpath("//*[text()='Logout']")).click();
-        //driver.quit();
-//}
-  // @After()
-  // public void closeBrowser(){
-     // driver.quit();
-   //}
+
+ @After()
+  public void closeBrowser(){
+     driver.quit();
+   }
 
 }
